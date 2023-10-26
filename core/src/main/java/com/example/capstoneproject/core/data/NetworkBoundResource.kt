@@ -29,7 +29,7 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
         }
     }
 
-    protected open fun onFetchFailed() {}
+    protected open fun onFetchFailed() = Unit
 
     protected abstract fun loadFromDB(): Flow<ResultType>
 
